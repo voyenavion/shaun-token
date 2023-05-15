@@ -1,0 +1,8 @@
+{
+  "mainnet": {
+    "ShaunToken": {
+      "address": "0xdb5E9738A240811e8d520CB254795C8e656651D8",
+      "startBlock": 220746
+    }
+  }
+}

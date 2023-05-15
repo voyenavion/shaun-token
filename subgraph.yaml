@@ -1,0 +1,24 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: ShaunToken
+    network: mainnet
+    source:
+      address: "0xdb5E9738A240811e8d520CB254795C8e656651D8"
+      abi: ShaunToken
+      startBlock: 220746
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Transfer
+      abis:
+        - name: ShaunToken
+          file: ./abis/ShaunToken.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/shaun-token.ts
